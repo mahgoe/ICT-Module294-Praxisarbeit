@@ -9,3 +9,7 @@
 .service-mark-grey {
   @apply text-xl text-gray-600;
 }
+
+.material-fill {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
