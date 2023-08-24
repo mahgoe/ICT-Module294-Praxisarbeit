@@ -17,13 +17,16 @@ dropdownButton.addEventListener("click", () => {
 });
 
 optionItems.forEach((item) => {
-  item.addEventListener("click", (e) => setActive(e.target));
+  item.addEventListener("click", (e) => {
+    console.log(e);
+    setActive(e.target);
+  });
 });
 
 function setActive(target) {
   const value = target.getAttribute("data-value");
   const text = target.textContent;
   hiddenSelect.value = value;
-  dropdownButton.textContent = text;
+  document.getElementById("dropdownDisplay").textContent = text;
   dropdownMenu.classList.add("hidden");
 }
