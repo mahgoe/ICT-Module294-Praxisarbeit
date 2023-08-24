@@ -2,6 +2,11 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+html,
+body {
+  min-height: 100vh;
+}
+
 .service-mark {
   @apply text-xl text-blue-600 dark:text-blue-500;
 }
@@ -12,4 +17,8 @@
 
 .material-fill {
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.active {
+  @apply text-blue-600 dark:text-blue-500;
 }
