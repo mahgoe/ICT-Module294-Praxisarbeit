@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de-DE">
   <head>
+    <!-- TEMPLATE_START: templates\head.html -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -8,6 +9,8 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
     <link href="./css/styles.css" rel="stylesheet" />
+
+    <!-- TEMPLATE_END: templates\head.html -->
     <title>Jetstream</title>
   </head>
   <body>
@@ -15,6 +18,7 @@
       <!-- Navigation Section - Dienstleistungen als Übersicht -->
 
       <section class="flex flex-col items-center snap-start">
+        <!-- TEMPLATE_START: templates\navigation.html -->
         <nav
           class="fixed z-50 w-full border-gray-200 dark:bg-gray-900 bg-slate-100"
         >
@@ -62,38 +66,34 @@
               >
                 <li>
                   <a
-                    href="#"
-                    class="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                    aria-current="page"
+                    href="index.html"
+                    class="block py-2 pl-3 pr-4 text-gray-900 rounded md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    data-page="index"
                     >Home</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
+                    data-page="services"
+                    href="services.html"
                     class="block py-2 pl-3 pr-4 text-gray-900 rounded md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                    >About</a
+                    >Dienstleistungen</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
+                    data-page="form"
+                    href="form.html"
                     class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                    >Services</a
+                    >Anfrage</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
+                    data-page="contact"
+                    href="contact.html"
                     class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                    >Pricing</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                    >Contact</a
+                    >Kontakt</a
                   >
                 </li>
                 <li>
@@ -114,6 +114,8 @@
             </div>
           </div>
         </nav>
+
+        <!-- TEMPLATE_END: templates\navigation.html -->
 
         <!-- Video Section - Videohintergrund-->
 
@@ -392,7 +394,7 @@
       </section>
 
       <!-- Footer Section -->
-
+      <!-- TEMPLATE_START: templates\footer.html -->
       <footer class="flex bg-slate-100 snap-start dark:bg-gray-900">
         <div class="w-full p-4 mx-auto md:py-4">
           <div class="sm:flex sm:items-center sm:justify-between">
@@ -449,6 +451,8 @@
           >
         </div>
       </footer>
+
+      <!-- TEMPLATE_END: templates\footer.html -->
     </div>
     <script src="js/main.js"></script>
   </body>

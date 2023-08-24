@@ -1,0 +1,16 @@
+{
+  "templates": [
+    {
+      "path": "templates\\head.html",
+      "targets": ["index.html", "form.html"]
+    },
+    {
+      "path": "templates\\navigation.html",
+      "targets": ["index.html", "form.html"]
+    },
+    {
+      "path": "templates\\footer.html",
+      "targets": ["index.html", "form.html"]
+    }
+  ]
+}
