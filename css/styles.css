@@ -1389,10 +1389,6 @@ body {
     border-width: 0px;
   }
 
-  .md\:bg-transparent {
-    background-color: transparent;
-  }
-
   .md\:object-cover {
     -o-object-fit: cover;
        object-fit: cover;
@@ -1411,11 +1407,6 @@ body {
     padding-bottom: 1rem;
   }
 
-  .md\:text-blue-700 {
-    --tw-text-opacity: 1;
-    color: rgb(29 78 216 / var(--tw-text-opacity));
-  }
-
   .md\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -1428,11 +1419,6 @@ body {
   :is(.dark .md\:dark\:bg-gray-900) {
     --tw-bg-opacity: 1;
     background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-  }
-
-  :is(.dark .md\:dark\:text-blue-500) {
-    --tw-text-opacity: 1;
-    color: rgb(59 130 246 / var(--tw-text-opacity));
   }
 
   :is(.dark .md\:dark\:hover\:bg-transparent:hover) {
