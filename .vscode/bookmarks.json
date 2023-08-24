@@ -1,46 +1,21 @@
 {
 	"files": [
 		{
-			"path": "index.html",
+			"path": "form.html",
 			"bookmarks": [
 				{
 					"line": 14,
-					"column": 0,
+					"column": 6,
 					"label": ""
 				},
 				{
-					"line": 117,
-					"column": 3,
+					"line": 74,
+					"column": 6,
 					"label": ""
 				},
 				{
-					"line": 137,
-					"column": 0,
-					"label": ""
-				},
-				{
-					"line": 146,
-					"column": 4,
-					"label": ""
-				},
-				{
-					"line": 214,
-					"column": 9,
-					"label": ""
-				},
-				{
-					"line": 282,
-					"column": 0,
-					"label": ""
-				},
-				{
-					"line": 351,
-					"column": 4,
-					"label": ""
-				},
-				{
-					"line": 363,
-					"column": 5,
+					"line": 177,
+					"column": 8,
 					"label": ""
 				}
 			]
