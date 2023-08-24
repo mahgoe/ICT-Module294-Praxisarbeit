@@ -60,7 +60,7 @@ function main() {
     }
   });
   handleNavbar();
-  navBarFixed();
+  getWrapperHeight();
 }
 
 function setActiveNavigation(name) {
@@ -92,21 +92,19 @@ function handleNavbar() {
   }
 }
 
-// function getWrapperHeight() {
-//   // Höhe der Navigation ermitteln
-//   var navHeight = document.querySelector("nav").offsetHeight;
+function getWrapperHeight() {
+  // Höhe der Navigation ermitteln
+  var navHeight = document.querySelector("nav").offsetHeight;
+  setMargin("form-wrapper", navHeight);
+  setMargin("services-wrapper", navHeight);
+}
 
-//   var formHeight = document.getElementById("form-wrapper");
-//   var servicesHeight = document.getElementById("services-wrapper");
-//   setMargin("form-wrapper", navHeight);
-// }
-
-// function setMargin(name, height) {
-//   document.querySelector(`[id="${name}-wrapper"]`).classList.add("mt-100");
-
-//   formHeight.style.marginTop = navHeight + "px";
-//   servicesHeight.style.marginTop = navHeight + "px";
-// }
+function setMargin(name, height) {
+  const elm = document.getElementById(name);
+  if (elm) {
+    elm.style.marginTop = height + "px";
+  }
+}
 // Aufruf der Hauptfunktion, wenn das Fenster geladen wird
 
 document.addEventListener("DOMContentLoaded", main);
