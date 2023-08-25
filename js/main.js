@@ -97,6 +97,7 @@ function getWrapperHeight() {
   var navHeight = document.querySelector("nav").offsetHeight;
   setMargin("form-wrapper", navHeight);
   setMargin("services-wrapper", navHeight);
+  setMargin("index-wrapper", navHeight);
 }
 
 function setMargin(name, height) {
