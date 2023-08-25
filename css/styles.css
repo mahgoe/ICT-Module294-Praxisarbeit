@@ -1145,6 +1145,109 @@ body {
   color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.collapsible {
+  max-width: 450px;
+  overflow: hidden;
+  font-weight: 500;
+}
+
+.collapsible input {
+  display: none;
+}
+
+.collapsible label {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0.625rem;
+  display: block;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 15px;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(28 28 107 / var(--tw-text-opacity));
+  --tw-shadow: 0 5px 11px 0 rgba(0,0,0,0.1),0 4px 11px 0 rgba(0,0,0,0.08);
+  --tw-shadow-colored: 0 5px 11px 0 var(--tw-shadow-color), 0 4px 11px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.collapsible label::after {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  height: 18px;
+  width: 18px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  --tw-content: "";
+  content: var(--tw-content);
+  background: url(assets/img/arrow.png) no-repeat 0 0;
+}
+
+.collapsible input:checked + label:after {
+  --tw-rotate: 90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.collapsible-text {
+  position: relative;
+  top: -100%;
+  max-height: 1px;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  line-height: 1.4;
+  opacity: 0.5;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+.collapsible input:checked ~ .collapsible-text {
+  top: 0px;
+  max-height: 300px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-bottom: 25px;
+  opacity: 1;
+  --tw-shadow: 0 5px 11px 0 rgba(0,0,0,0.1),0 4px 11px 0 rgba(0,0,0,0.08);
+  --tw-shadow-colored: 0 5px 11px 0 var(--tw-shadow-color), 0 4px 11px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.collapsible-text h2 {
+  margin-bottom: 0.625rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 0px;
+  --tw-text-opacity: 1;
+  color: rgb(28 28 107 / var(--tw-text-opacity));
+}
+
+.collapsible-text p {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .hover\:bg-blue-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
