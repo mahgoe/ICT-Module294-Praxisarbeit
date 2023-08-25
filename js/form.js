@@ -30,3 +30,10 @@ function setActive(target) {
   document.getElementById("dropdownDisplay").textContent = text;
   dropdownMenu.classList.add("hidden");
 }
+
+document.querySelector("form").addEventListener("submit", function (e) {
+  if (!hiddenSelect.value || hiddenSelect.value === "") {
+    e.preventDefault();
+    alert("Bitte wählen Sie eine Dienstleistung aus");
+  }
+});
