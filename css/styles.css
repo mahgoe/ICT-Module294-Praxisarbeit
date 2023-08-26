@@ -1238,6 +1238,18 @@ video {
   padding-top: 0.37rem;
 }
 
+.pt-28 {
+  padding-top: 7rem;
+}
+
+.pb-20 {
+  padding-bottom: 5rem;
+}
+
+.pt-32 {
+  padding-top: 8rem;
+}
+
 .text-left {
   text-align: left;
 }
