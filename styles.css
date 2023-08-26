@@ -22,3 +22,39 @@ body {
 .active {
   @apply text-blue-600 dark:text-blue-500;
 }
+
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+.wrapper {
+  @apply flex justify-center pt-[50px];
+}
+.collapsible {
+  @apply max-w-[450px] overflow-hidden font-medium;
+}
+.collapsible input {
+  @apply hidden;
+}
+.collapsible label {
+  @apply relative font-semibold bg-white shadow-[0_5px_11px_0_rgba(0,0,0,0.1),0_4px_11px_0_rgba(0,0,0,0.08)] text-[#1c1c6b] block cursor-pointer rounded z-[1] mb-2.5 p-[15px] after:content-[""] after:absolute after:w-[18px] after:h-[18px] after:transition-all after:duration-[0.3s] after:ease-[ease] after:right-[15px] after:top-[15px];
+}
+.collapsible label::after {
+  background: url(assets/img/arrow.png) no-repeat 0 0;
+}
+.collapsible input:checked + label:after {
+  @apply rotate-90;
+}
+.collapsible-text {
+  @apply max-h-px overflow-hidden rounded leading-[1.4] relative opacity-50 transition-all duration-[0.3s] ease-[ease] -top-full;
+}
+.collapsible input:checked ~ .collapsible-text {
+  @apply max-h-[300px] bg-white shadow-[0_5px_11px_0_rgba(0,0,0,0.1),0_4px_11px_0_rgba(0,0,0,0.08)] opacity-100 pb-[25px] top-0;
+}
+.collapsible-text h2 {
+  @apply text-[#1c1c6b] mb-2.5 pt-[15px] pb-0 px-[15px];
+}
+.collapsible-text p {
+  @apply px-[15px];
+}

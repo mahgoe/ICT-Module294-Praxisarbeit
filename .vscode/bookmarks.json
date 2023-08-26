@@ -1,16 +1,6 @@
 {
 	"files": [
 		{
-			"path": "form.html",
-			"bookmarks": [
-				{
-					"line": 249,
-					"column": 68,
-					"label": ""
-				}
-			]
-		},
-		{
 			"path": "index.html",
 			"bookmarks": [
 				{
@@ -19,33 +9,38 @@
 					"label": ""
 				},
 				{
-					"line": 119,
+					"line": 117,
 					"column": 3,
 					"label": ""
 				},
 				{
-					"line": 139,
+					"line": 137,
 					"column": 0,
 					"label": ""
 				},
 				{
-					"line": 148,
+					"line": 146,
 					"column": 4,
 					"label": ""
 				},
 				{
-					"line": 226,
+					"line": 224,
 					"column": 9,
 					"label": ""
 				},
 				{
-					"line": 304,
+					"line": 302,
 					"column": 0,
 					"label": ""
 				},
 				{
-					"line": 383,
+					"line": 381,
 					"column": 4,
+					"label": ""
+				},
+				{
+					"line": 393,
+					"column": 5,
 					"label": ""
 				}
 			]
