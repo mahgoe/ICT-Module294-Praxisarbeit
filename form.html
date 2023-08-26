@@ -248,95 +248,25 @@
             >Ausgewählte Dienstleistung:</span
           >
 
-          <!-- Gestaltetes select Element -->
-          <select
-            id="styledSelect"
-            required
-            class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mt-1 text-black hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-blue-700"
-          >
-            <option value="" disabled selected>
-              Bitte wählen Sie eine Option
-            </option>
-            <option value="kleinerService">Kleiner Service</option>
-            <option value="grosserService">Grosser Service</option>
-            <option value="rennskiService">Rennski Service</option>
-            <option value="bindung">Bindung montieren und einstellen</option>
-            <option value="fell">Fell zuschneiden</option>
-            <option value="heisswachsen">Heisswachsen</option>
-          </select>
-
-          <!-- Sichtbarer Button, der als Dropdown-Trigger dient 
-          <button
-            id="dropdownDisplayButton"
-            class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mt-1 text-black hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-blue-700"
-            type="button"
-          >
-            <span id="dropdownDisplay">Wählen Sie eine Option</span>
-            <span class="material-symbols-outlined"> expand_more </span>
-          </button>
--->
-
-          <!-- Verstecktes select Element 
-          <select id="hiddenSelect" class="hidden">
-            <option value="" disabled selected>
-              Bitte wählen Sie eine Option
-            </option>
-            <option value="kleinerService">kleiner Service</option>
-            <option value="grosserService">Grosser Service</option>
-            <option value="rennskiService">Rennski Service</option>
-            <option value="bindung">Bindung montieren und einstellen</option>
-            <option value="fell">Fell zuschneiden</option>
-            <option value="heisswachsen">Heisswachsen</option>
-          </select>
--->
-
-          <!-- Dropdown-Menü 
-          <div
-            id="dropdownMenu"
-            class="relative z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-          >
-            <ul
-              class="absolute z-30 py-2 text-sm text-gray-700 bg-white dark:text-gray-200"
+          <div class="relative inline-block w-full">
+            <select
+              class="block w-full bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:focus:border-blue-500 p-2.5"
+              required
             >
-              <li
-                data-value="kleinerService"
-                class="block px-4 py-2 optionItem hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >
-                Kleiner Service
-              </li>
-              <li
-                data-value="grosserService"
-                class="block px-4 py-2 optionItem hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >
-                Grosser Service
-              </li>
-              <li
-                data-value="rennskiService"
-                class="block px-4 py-2 optionItem hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >
-                Rennski Service
-              </li>
-              <li
-                data-value="bindung"
-                class="block px-4 py-2 optionItem hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >
-                Bindung montieren und einstellen
-              </li>
-              <li
-                data-value="fell"
-                class="block px-4 py-2 optionItem hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >
-                Fell zuschneiden
-              </li>
-              <li
-                data-value="heisswachsen"
-                class="block px-4 py-2 optionItem hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >
-                Heisswachsen
-              </li>
-            </ul>
+              <option value="" disabled selected>Wählen Sie eine Option</option>
+              <option value="kleinerService">Kleiner Service</option>
+              <option value="grosserService">Grosser Service</option>
+              <option value="rennskiService">Rennski Service</option>
+              <option value="bindung">Bindung montieren und einstellen</option>
+              <option value="fell">Fell zuschneiden</option>
+              <option value="heisswachsen">Heisswachsen</option>
+            </select>
+            <span
+              class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none"
+            >
+            </span>
           </div>
--->
+
           <!-- Submit Button -->
           <div class="flex items-start mt-6">
             <button
