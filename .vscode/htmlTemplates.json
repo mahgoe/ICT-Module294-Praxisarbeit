@@ -6,7 +6,8 @@
                 "index.html",
                 "form.html",
                 "services.html",
-                "contact.html"
+                "contact.html",
+                "about.html"
             ]
         },
         {
@@ -15,7 +16,8 @@
                 "index.html",
                 "form.html",
                 "services.html",
-                "contact.html"
+                "contact.html",
+                "about.html"
             ]
         },
         {
@@ -24,7 +26,8 @@
                 "index.html",
                 "form.html",
                 "services.html",
-                "contact.html"
+                "contact.html",
+                "about.html"
             ]
         }
     ]
