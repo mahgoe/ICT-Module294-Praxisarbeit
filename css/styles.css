@@ -617,28 +617,16 @@ video {
   top: 0px;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .z-40 {
   z-index: 40;
 }
 
 .z-50 {
   z-index: 50;
-}
-
-.z-\[1\] {
-  z-index: 1;
-}
-
-.z-\[3\] {
-  z-index: 3;
-}
-
-.z-\[10\] {
-  z-index: 10;
-}
-
-.z-10 {
-  z-index: 10;
 }
 
 .mx-auto {
@@ -659,10 +647,6 @@ video {
 .my-7 {
   margin-top: 1.75rem;
   margin-bottom: 1.75rem;
-}
-
-.mb-1 {
-  margin-bottom: 0.25rem;
 }
 
 .mb-10 {
@@ -721,6 +705,10 @@ video {
   margin-right: 1rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mt-16 {
   margin-top: 4rem;
 }
@@ -741,32 +729,12 @@ video {
   margin-top: 1.5rem;
 }
 
-.mt-8 {
-  margin-top: 2rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
-.mt-24 {
-  margin-top: 6rem;
-}
-
-.mt-32 {
-  margin-top: 8rem;
-}
-
-.mt-28 {
-  margin-top: 7rem;
-}
-
-.mt-36 {
-  margin-top: 9rem;
-}
-
 .mt-60 {
   margin-top: 15rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .block {
@@ -883,14 +851,6 @@ video {
 
 .max-w-sm {
   max-width: 24rem;
-}
-
-.max-w-2xl {
-  max-width: 42rem;
-}
-
-.max-w-xs {
-  max-width: 20rem;
 }
 
 .flex-1 {
@@ -1011,10 +971,6 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
-}
-
-.space-y-reverse > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 1;
 }
 
 .self-center {
@@ -1272,14 +1228,6 @@ video {
 
 .text-center {
   text-align: center;
-}
-
-.align-middle {
-  vertical-align: middle;
-}
-
-.align-bottom {
-  vertical-align: bottom;
 }
 
 .text-2xl {
@@ -1820,10 +1768,6 @@ body {
     padding-bottom: 1rem;
   }
 
-  .md\:pl-12 {
-    padding-left: 3rem;
-  }
-
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -1864,8 +1808,8 @@ body {
     margin-bottom: 1rem;
   }
 
-  .lg\:-mr-14 {
-    margin-right: -3.5rem;
+  .lg\:-mr-10 {
+    margin-right: -2.5rem;
   }
 
   .lg\:mb-0 {
@@ -1874,14 +1818,6 @@ body {
 
   .lg\:mt-0 {
     margin-top: 0px;
-  }
-
-  .lg\:-mr-72 {
-    margin-right: -18rem;
-  }
-
-  .lg\:-mr-10 {
-    margin-right: -2.5rem;
   }
 
   .lg\:h-64 {
