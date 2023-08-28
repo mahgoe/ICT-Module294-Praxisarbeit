@@ -629,6 +629,18 @@ video {
   z-index: 1;
 }
 
+.z-\[3\] {
+  z-index: 3;
+}
+
+.z-\[10\] {
+  z-index: 10;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -731,6 +743,30 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-24 {
+  margin-top: 6rem;
+}
+
+.mt-32 {
+  margin-top: 8rem;
+}
+
+.mt-28 {
+  margin-top: 7rem;
+}
+
+.mt-36 {
+  margin-top: 9rem;
+}
+
+.mt-60 {
+  margin-top: 15rem;
 }
 
 .block {
@@ -849,6 +885,14 @@ video {
   max-width: 24rem;
 }
 
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.max-w-xs {
+  max-width: 20rem;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -899,6 +943,10 @@ video {
 
 .flex-row {
   flex-direction: row;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
 }
 
 .flex-col {
@@ -963,6 +1011,10 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+
+.space-y-reverse > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 1;
 }
 
 .self-center {
@@ -1220,6 +1272,14 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
+.align-bottom {
+  vertical-align: bottom;
 }
 
 .text-2xl {
@@ -1760,6 +1820,10 @@ body {
     padding-bottom: 1rem;
   }
 
+  .md\:pl-12 {
+    padding-left: 3rem;
+  }
+
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -1810,6 +1874,14 @@ body {
 
   .lg\:mt-0 {
     margin-top: 0px;
+  }
+
+  .lg\:-mr-72 {
+    margin-right: -18rem;
+  }
+
+  .lg\:-mr-10 {
+    margin-right: -2.5rem;
   }
 
   .lg\:h-64 {
