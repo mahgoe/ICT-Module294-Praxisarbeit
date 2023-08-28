@@ -75,6 +75,14 @@ function handleNavbar() {
   const relativePath = window.location.pathname;
 
   switch (relativePath) {
+    case "/index.html":
+      setActiveNavigation("index");
+      break;
+
+    case "/":
+      setActiveNavigation("index");
+      break;
+
     case "/about.html":
       setActiveNavigation("about");
       break;
@@ -92,7 +100,7 @@ function handleNavbar() {
       break;
 
     default:
-      setActiveNavigation("index");
+      setActiveNavigation("/");
       break;
   }
 }
