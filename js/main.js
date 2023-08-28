@@ -105,6 +105,7 @@ function getWrapperHeight() {
   setMargin("index-wrapper", navHeight);
   setMargin("contact-wrapper", navHeight);
   setMargin("about-wrapper", navHeight);
+  setMargin("policies-wrapper", navHeight);
 }
 
 function setMargin(name, height) {
