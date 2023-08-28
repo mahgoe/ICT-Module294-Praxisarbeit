@@ -67,6 +67,7 @@ function setActiveNavigation(name) {
   document.querySelectorAll(`a[data-page="*"]`).forEach((elm) => {
     elm.classList.remove("active");
   });
+  console.log(name);
   document.querySelector(`a[data-page="${name}"]`).classList.add("active");
 }
 
@@ -74,6 +75,10 @@ function handleNavbar() {
   const relativePath = window.location.pathname;
 
   switch (relativePath) {
+    case "/about.html":
+      setActiveNavigation("about");
+      break;
+
     case "/form.html":
       setActiveNavigation("form");
       break;
