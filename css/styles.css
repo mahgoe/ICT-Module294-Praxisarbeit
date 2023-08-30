@@ -1431,6 +1431,85 @@ body {
   color: rgb(37 99 235 / var(--tw-text-opacity)) !important;
 }
 
+/* Text Animation  */
+
+.video-container {
+  position: relative;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 7rem;
+  font-weight: bold;
+  display: flex;
+  font-size: 4vw;
+}
+
+.text {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.text2 {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: slideText 3s linear infinite;
+  /* Added animation */
+}
+
+.white-text {
+  color: white;
+}
+
+.yellow-text {
+  color: yellow;
+}
+
+.cursor {
+  animation: blink 0.5s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes slideText {
+  0% {
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: -100%;
+  }
+}
+
+/* New rules for the text animation with a "frame" */
+
+.text2-container {
+  width: calc(14px * 32);
+  /* Assume each character takes up roughly 14px and text2 has 32 characters */
+  text-align: left;
+  /* Align text to the left within the container */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.text2 {
+  display: inline-block;
+  direction: ltr;
+  /* Left-to-right direction for text writing */
+}
+
 .hover\:bg-blue-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
@@ -1863,3 +1942,4 @@ body {
     padding-right: 8rem;
   }
 }
+
