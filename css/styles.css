@@ -717,10 +717,6 @@ video {
   margin-top: 0.5rem;
 }
 
-.mt-20 {
-  margin-top: 5rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
@@ -877,12 +873,12 @@ video {
   cursor: default;
 }
 
-.cursor-pointer {
-  cursor: pointer;
-}
-
 .cursor-not-allowed {
   cursor: not-allowed;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .select-none {
@@ -999,11 +995,6 @@ video {
 
 .whitespace-nowrap {
   white-space: nowrap;
-}
-
-.break-normal {
-  overflow-wrap: normal;
-  word-break: normal;
 }
 
 .rounded {
