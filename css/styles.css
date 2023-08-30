@@ -881,6 +881,10 @@ video {
   cursor: pointer;
 }
 
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
 .select-none {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -995,6 +999,11 @@ video {
 
 .whitespace-nowrap {
   white-space: nowrap;
+}
+
+.break-normal {
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 .rounded {
