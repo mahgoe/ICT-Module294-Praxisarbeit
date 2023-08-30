@@ -35,6 +35,15 @@ function main() {
     setThemeLight();
   }
 
+  const toggleButton = document.querySelector(
+    '[data-collapse-toggle="navbar-default"]'
+  );
+  const navbarMenu = document.getElementById("navbar-menu");
+
+  toggleButton.addEventListener("click", () => {
+    navbarMenu.classList.toggle("hidden");
+    navbarMenu.classList.toggle("block");
+  });
   themeToggleBtn.addEventListener("click", function () {
     // toggle icons inside button
 
