@@ -1018,7 +1018,7 @@
                 classList.add("next", "text-gray-500", "dark:text-white");
               }
               if (this.today === current) {
-                classList.add("today", "bg-gray-100", "dark:bg-gray-600");
+                classList.add("today", "bg-gray-300", "dark:bg-gray-600");
               }
               if (
                 current < this.minDate ||
