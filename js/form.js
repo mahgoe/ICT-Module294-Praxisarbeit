@@ -39,6 +39,12 @@ function calculateTotal() {
     serviceCost = 69;
   } else if (serviceOption === "rennskiService") {
     serviceCost = 99;
+  } else if (serviceOption === "bindung") {
+    serviceCost = 39;
+  } else if (serviceOption === "fell") {
+    serviceCost = 25;
+  } else if (serviceOption === "heisswachsen") {
+    serviceCost = 18;
   }
   // ... (weitere Optionen)
 
