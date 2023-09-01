@@ -11,7 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
     <link href="./css/styles.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="./assets/img/logo.png" />
 
     <!-- TEMPLATE_END: templates\head.html -->
     <title>Dienstleistung</title>
@@ -19,112 +18,106 @@
   <body>
     <div class="bg-slate-50 dark:bg-slate-800">
       <!-- TEMPLATE_START: templates\navigation.html -->
-      <nav
-        class="fixed z-50 w-full border-gray-200 dark:bg-gray-900 bg-slate-100"
+<nav class="fixed z-50 w-full border-gray-200 dark:bg-gray-900 bg-slate-100">
+  <div
+    class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto"
+  >
+    <a href="index.html" class="flex items-center">
+      <img src="./assets/img/logo.png" class="h-20 mr-2 logo" alt="Logo" />
+      <span
+        class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+        >Jetstream-Service</span
       >
-        <div
-          class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto"
-        >
-          <a href="index.html" class="flex items-center">
-            <img
-              src="./assets/img/logo.png"
-              class="h-20 mr-2 logo"
-              alt="Logo"
-            />
-            <span
-              class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-              >Jetstream-Service</span
-            >
-          </a>
-          <button
-            data-collapse-toggle="navbar-default"
-            type="button"
-            class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-default"
-            aria-expanded="false"
+    </a>
+    <button
+      data-collapse-toggle="navbar-default"
+      type="button"
+      class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+      aria-controls="navbar-default"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Open main menu</span>
+      <svg
+        class="w-5 h-5"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 17 14"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M1 1h15M1 7h15M1 13h15"
+        />
+      </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-menu">
+      <ul
+        class="flex flex-col items-center p-4 mt-4 font-medium border rounded-lg md:p-0 md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+      >
+        <li>
+          <a
+            href="index.html"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+            data-page="index"
+            >Home</a
           >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
+        </li>
+        <li>
+          <a
+            data-page="services"
+            href="services.html"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+            >Dienstleistungen</a
+          >
+        </li>
+
+        <li>
+          <a
+            data-page="form"
+            href="form.html"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+            >Anfrage</a
+          >
+        </li>
+        <li>
+          <a
+            data-page="about"
+            href="about.html"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+            >Über uns</a
+          >
+        </li>
+        <li>
+          <a
+            data-page="contact"
+            href="contact.html"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+            >Kontakt</a
+          >
+        </li>
+        <li>
+          <button
+            id="theme-toggle"
+            type="button"
+            class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+          >
+            <span
+              class="flex justify-start material-symbols-outlined material-fill"
+              id="theme-toggle-icon"
             >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
+              dark_mode
+            </span>
           </button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-menu">
-            <ul
-              class="flex flex-col items-center p-4 mt-4 font-medium border rounded-lg md:p-0 md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
-            >
-              <li>
-                <a
-                  href="index.html"
-                  class="block py-2 pl-3 pr-4 text-gray-900 rounded md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                  data-page="index"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  data-page="services"
-                  href="services.html"
-                  class="block py-2 pl-3 pr-4 text-gray-900 rounded md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                  >Dienstleistungen</a
-                >
-              </li>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-              <li>
-                <a
-                  data-page="form"
-                  href="form.html"
-                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                  >Anfrage</a
-                >
-              </li>
-              <li>
-                <a
-                  data-page="about"
-                  href="about.html"
-                  class="block py-2 pl-3 pr-4 text-gray-900 rounded md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                  >Über uns</a
-                >
-              </li>
-              <li>
-                <a
-                  data-page="contact"
-                  href="contact.html"
-                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                  >Kontakt</a
-                >
-              </li>
-              <li>
-                <button
-                  id="theme-toggle"
-                  type="button"
-                  class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
-                >
-                  <span
-                    class="flex justify-start material-symbols-outlined material-fill"
-                    id="theme-toggle-icon"
-                  >
-                    dark_mode
-                  </span>
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!-- TEMPLATE_END: templates\navigation.html -->
+<!-- TEMPLATE_END: templates\navigation.html -->
       <!-- Section: Design Block -->
       <section>
         <div class="px-40 pt-40 bg-slate-50 dark:bg-slate-800">
@@ -151,7 +144,7 @@
             </div>
 
             <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 lg:pl-6">
-              <h3 class="mb-4 text-2xl font-bold dark:text-white">
+              <h3 class="mb-4 text-2xl font-bold dark:text-gray-400">
                 <a href="form.html?service=kleinerService"
                   >Kleiner Service | CHF 49.-</a
                 >
@@ -167,7 +160,7 @@
                 Belag-Struktur ermöglicht ein perfektes Gleiten und leichtes
                 Steuern der Ski.
               </p>
-              <h2 class="mb-4 text-lg font-bold dark:text-white">
+              <h2 class="mb-4 text-lg font-bold dark:text-gray-400">
                 Wachsen & Polieren
               </h2>
               <p class="text-neutral-500 dark:text-neutral-300">
@@ -197,7 +190,7 @@
             </div>
 
             <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 lg:pr-6">
-              <h3 class="mb-4 text-2xl font-bold dark:text-white">
+              <h3 class="mb-4 text-2xl font-bold dark:text-gray-400">
                 <a href="form.html?service=grosserService"
                   >Grosser Service | CHF 69.-</a
                 >
@@ -210,7 +203,7 @@
                 der Piste. Die Belagaufbesserung behebt Belagschäden und
                 optimiert das Gleitverhalten.
               </p>
-              <h2 class="mb-4 text-lg font-bold dark:text-white">
+              <h2 class="mb-4 text-lg font-bold dark:text-gray-400">
                 Wachsen & Polieren
               </h2>
               <p class="mb-6 text-neutral-500 dark:text-neutral-300">
@@ -218,7 +211,9 @@
                 geschliffen und eine Basisstruktur für den anschliessenden
                 Belag-Strukturschliff gelegt.
               </p>
-              <h2 class="mb-4 text-lg font-bold dark:text-white">Entgraten</h2>
+              <h2 class="mb-4 text-lg font-bold dark:text-gray-400">
+                Entgraten
+              </h2>
               <p class="text-neutral-500 dark:text-neutral-300">
                 Abschließendes Entgraten verfeinert die Oberfläche, entfernt
                 scharfe Kanten und erhöht die Lebensdauer Ihrer Ausrüstung.
@@ -247,7 +242,7 @@
             <div
               class="w-full mb-16 shrink-0 grow-0 basis-auto lg:w-6/12 lg:pl-6"
             >
-              <h3 class="mb-4 text-2xl font-bold dark:text-white">
+              <h3 class="mb-4 text-2xl font-bold dark:text-gray-400">
                 <a href="form.html?service=rennskiService"
                   >Rennski Service | CHF 99.-</a
                 >
@@ -259,7 +254,7 @@
                 scharfe Kanten für präzise Kurvenfahrten. Belagaufbesserung
                 korrigiert Belag-Imperfektionen für optimales Gleiten.
               </p>
-              <h2 class="mb-4 text-lg font-bold dark:text-white">
+              <h2 class="mb-4 text-lg font-bold dark:text-gray-400">
                 Wachsen & Polieren
               </h2>
               <p class="mb-6 text-neutral-500 dark:text-neutral-300">
@@ -273,7 +268,9 @@
                 angewendet, der tiefer in den Belag eindringt und für eine
                 extrem dauerhafte Gleitfähigkeit sorgt.
               </p>
-              <h2 class="mb-4 text-lg font-bold dark:text-white">Entgraten</h2>
+              <h2 class="mb-4 text-lg font-bold dark:text-gray-400">
+                Entgraten
+              </h2>
               <p class="text-neutral-500 dark:text-neutral-300">
                 Das Entgraten optimiert die Skioberfläche. Das finale Handfinish
                 stellt Wettkampfqualität und -leistung sicher.
@@ -298,7 +295,7 @@
               </div>
 
               <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 lg:pr-6">
-                <h3 class="mb-4 text-2xl font-bold dark:text-white">
+                <h3 class="mb-4 text-2xl font-bold dark:text-gray-400">
                   <a href="form.html?service=bindung"
                     >Bindung montieren und einstellen | CHF 39.-</a
                   >
@@ -313,7 +310,7 @@
                   unsere Erfahrung, um mit Sicherheit und Komfort die Pisten
                   herunterzufahren.
                 </p>
-                <h3 class="mb-4 text-2xl font-bold dark:text-white">
+                <h3 class="mb-4 text-2xl font-bold dark:text-gray-400">
                   <a href="form.html?service=fell"
                     >Fell zuschneiden pro Paar | CHF 25.-</a
                   >
@@ -327,7 +324,7 @@
                   sich auf unsere Expertise für effiziente und angenehme
                   Skitouren.
                 </p>
-                <h3 class="mb-4 text-2xl font-bold dark:text-white">
+                <h3 class="mb-4 text-2xl font-bold dark:text-gray-400">
                   <a href="form.html?service=heisswachsen"
                     >Heisswachsen | 18.-</a
                   >
@@ -350,9 +347,9 @@
           </h1>
           <div class="flex justify-center overflow-x-auto sm:rounded-lg">
             <table
-              class="w-full max-w-lg text-sm text-left text-gray-500 dark:text-white"
+              class="w-full max-w-lg text-sm text-left text-gray-500 dark:text-gray-400"
             >
-              <thead class="text-xs text-gray-700 uppercase dark:text-white">
+              <thead class="text-xs text-gray-700 uppercase dark:text-gray-400">
                 <tr>
                   <th scope="col" class="px-6 py-3 bg-gray-50 dark:bg-gray-800">
                     Priorität
