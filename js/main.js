@@ -76,7 +76,7 @@ function setActiveNavigation(name) {
   document.querySelectorAll(`a[data-page="*"]`).forEach((elm) => {
     elm.classList.remove("active");
   });
-  console.log(name);
+
   document.querySelector(`a[data-page="${name}"]`).classList.add("active");
 }
 

@@ -129,21 +129,19 @@
       <h1 class="pb-5 mt-8 text-4xl text-center dark:text-slate-100">
         Online Anfrage
       </h1>
+
       <div
         class="w-full max-w-md p-4 mb-10 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700"
       >
-        <p class="mb-2 text-red-600" id="errorMessageFirstName"></p>
-        <p class="mb-2 text-red-600" id="errorMessageLastName"></p>
-        <p class="mb-2 text-red-600" id="errorMessageEmail"></p>
-        <p class="mb-2 text-red-600" id="errorMessagePhone"></p>
         <form id="submitForm">
           <!-- input -->
           <div class="mb-6">
             <label
               for="firstname"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >Vorname</label
+              >Vorname<span class="text-red-600">*</span></label
             >
+
             <input
               type="text"
               id="firstname"
@@ -151,13 +149,14 @@
               placeholder="Vorname"
               required
             />
+            <p class="mb-2 text-red-600" id="errorMessageFirstName"></p>
           </div>
 
           <div class="mb-6">
             <label
               for="lastname"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >Nachname</label
+              >Nachname<span class="text-red-600">*</span></label
             >
             <input
               type="text"
@@ -166,13 +165,14 @@
               placeholder="Nachname"
               required
             />
+            <p class="mb-2 text-red-600" id="errorMessageLastName"></p>
           </div>
 
           <div class="mb-6">
             <label
               for="email"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >E-Mail</label
+              >E-Mail<span class="text-red-600">*</span></label
             >
             <input
               type="email"
@@ -181,13 +181,14 @@
               placeholder="email@example.com"
               required
             />
+            <p class="mb-2 text-red-600" id="errorMessageEmail"></p>
           </div>
 
           <div class="mb-6">
             <label
               for="phone"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >Telefon</label
+              >Telefon<span class="text-red-600">*</span></label
             >
             <input
               type="text"
@@ -196,6 +197,7 @@
               placeholder="+41 12 234 56 78"
               required
             />
+            <p class="mb-2 text-red-600" id="errorMessagePhone"></p>
           </div>
 
           <!-- Priority -->
@@ -286,7 +288,7 @@
               >Service Beginn Datum:</label
             >
 
-            <div class="relative max-w-sm">
+            <div class="relative">
               <div
                 class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none"
               >
@@ -320,7 +322,7 @@
               >Abholdatum:</label
             >
 
-            <div class="relative max-w-sm">
+            <div class="relative">
               <div
                 class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none"
               >
@@ -347,7 +349,9 @@
 
           <span
             class="block mt-6 mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Ausgewählte Dienstleistung:</span
+            >Ausgewählte Dienstleistung:<span class="text-red-600"
+              >*</span
+            ></span
           >
 
           <div class="relative">

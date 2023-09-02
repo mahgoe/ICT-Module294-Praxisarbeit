@@ -7,33 +7,58 @@ function validateForm(e) {
   const email = document.getElementById("email");
   const phone = document.getElementById("phone");
 
+  //Trimmen der Eingabewerte, um Leerzeichen vor hinter dem Wert zu entfernen
+  firstName.value = firstName.value.trim();
+  lastName.value = lastName.value.trim();
+  email.value = email.value.trim();
+  phone.value = phone.value.trim();
+
+  // Event-Listener für den Fokus-Zustand hinzufügen
+  function removeErrorBorderOnFocus(inputElement, ...defaultClasses) {
+    inputElement.addEventListener("focus", function () {
+      this.classList.remove("border-red-500"); // Entfernt den roten Rahmen
+      this.classList.add(...defaultClasses); // Fügt die ursprüngliche Randfarbe hinzu
+    });
+  }
+
+  removeErrorBorderOnFocus(
+    firstName,
+    "border-gray-300",
+    "dark:border-gray-600"
+  );
+  removeErrorBorderOnFocus(lastName, "border-gray-300", "dark:border-gray-600");
+  removeErrorBorderOnFocus(email, "border-gray-300", "dark:border-gray-600");
+  removeErrorBorderOnFocus(phone, "border-gray-300", "dark:border-gray-600");
+
   // Validierung
   let isValid = true;
 
-  if (!validateRequiredField(firstName) || !validateNoWhitespace(firstName)) {
+  if (!validateRequiredField(firstName) || !validateNameFormat(firstName)) {
     isValid = false;
     document.getElementById("errorMessageFirstName").innerText =
-      "Leerzeichen am Anfang oder Ende sind nicht erlaubt im Vornamen.";
+      "Bitte verwenden Sie nur Buchstaben, Leerzeichen oder Bindestriche im Vornamen. (Max-Muster/Max Muster)";
+    firstName.classList.remove("border-gray-300", "dark:border-gray-600"); // Entfernt die ursprüngliche Randfarbe
+    firstName.classList.add("border-red-500");
   } else {
     document.getElementById("errorMessageFirstName").innerText = "";
   }
 
-  if (!validateRequiredField(lastName) || !validateNoWhitespace(lastName)) {
+  if (!validateRequiredField(lastName) || !validateNameFormat(lastName)) {
     isValid = false;
     document.getElementById("errorMessageLastName").innerText =
-      "Leerzeichen am Anfang oder Ende sind nicht erlaubt im Nachnamen.";
+      "Bitte verwenden Sie nur Buchstaben, Leerzeichen oder Bindestriche im Nachname. (Max-Muster/Max Muster)";
+    lastName.classList.remove("border-gray-300", "dark:border-gray-600"); // Entfernt die ursprüngliche Randfarbe
+    lastName.classList.add("border-red-500");
   } else {
     document.getElementById("errorMessageLastName").innerText = "";
   }
 
-  if (
-    !validateRequiredField(email) ||
-    !validateNoWhitespace(email) ||
-    !validateEmailFormat(email)
-  ) {
+  if (!validateRequiredField(email) || !validateEmailFormat(email)) {
     isValid = false;
     document.getElementById("errorMessageEmail").innerText =
-      "Falsche E-Mail-Formatierung";
+      "Bitte geben Sie eine korrekte E-mail Adresse ein";
+    email.classList.remove("border-gray-300", "dark:border-gray-600"); // Entfernt die ursprüngliche Randfarbe
+    email.classList.add("border-red-500");
   } else {
     document.getElementById("errorMessageEmail").innerText = "";
   }
@@ -41,7 +66,9 @@ function validateForm(e) {
   if (!validateRequiredField(phone) || !validatePhoneNumber(phone)) {
     isValid = false;
     document.getElementById("errorMessagePhone").innerText =
-      "Falsche Telefonnummer-Formatierung";
+      "Bitte geben Sie eine korrekte Telefonnummer ein";
+    phone.classList.remove("border-gray-300", "dark:border-gray-600"); // Entfernt die ursprüngliche Randfarbe
+    phone.classList.add("border-red-500");
   } else {
     document.getElementById("errorMessagePhone").innerText = "";
   }
@@ -68,9 +95,11 @@ function validateRequiredField(field) {
   }
 }
 
-function validateNoWhitespace(field) {
-  const textPattern = /^\s|\s$/;
-  if (textPattern.test(field.value)) {
+// Funktion die nur Buchstaben und Bindestriche erlaubt
+function validateNameFormat(field) {
+  const namePattern = /^[a-zA-Z-][a-zA-Z-\s]*[a-zA-Z-]$/;
+
+  if (!namePattern.test(field.value)) {
     return false;
   }
   return true;
