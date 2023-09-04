@@ -141,7 +141,7 @@ function postData(firstName, lastName, email) {
       email: post.email,
       phone: post.phone,
       priority: post.priority,
-      service: post.serivce,
+      service: post.service,
       create_date: post.create_date,
       pickup_date: post.pickup_date,
     }),
