@@ -1,79 +1,77 @@
-function validateForm(e) {
-  e.preventDefault(); // Verhindert den Standard-Submit des Formulars
+function showErrorMessage(field, errorMessageId, message) {
+  document.getElementById(errorMessageId).innerText = message;
+  field.classList.remove("border-gray-300", "dark:border-gray-600");
+  field.classList.add("border-red-500");
+}
 
-  // Elemente aus dem Formular holen
+function clearErrorMessage(field, errorMessageId) {
+  document.getElementById(errorMessageId).innerText = "";
+  field.classList.remove("border-red-500");
+  field.classList.add("border-gray-300", "dark:border-gray-600");
+}
+
+function validateForm(e) {
+  e.preventDefault();
+
   const firstName = document.getElementById("firstname");
   const lastName = document.getElementById("lastname");
   const email = document.getElementById("email");
   const phone = document.getElementById("phone");
 
-  //Trimmen der Eingabewerte, um Leerzeichen vor hinter dem Wert zu entfernen
+  // Trim für alle Felder um keine Leerzeichen zu haben
   firstName.value = firstName.value.trim();
   lastName.value = lastName.value.trim();
   email.value = email.value.trim();
   phone.value = phone.value.trim();
 
-  // Event-Listener für den Fokus-Zustand hinzufügen
-  function removeErrorBorderOnFocus(inputElement, ...defaultClasses) {
-    inputElement.addEventListener("focus", function () {
-      this.classList.remove("border-red-500"); // Entfernt den roten Rahmen
-      this.classList.add(...defaultClasses); // Fügt die ursprüngliche Randfarbe hinzu
-    });
-  }
-
-  removeErrorBorderOnFocus(
-    firstName,
-    "border-gray-300",
-    "dark:border-gray-600"
-  );
-  removeErrorBorderOnFocus(lastName, "border-gray-300", "dark:border-gray-600");
-  removeErrorBorderOnFocus(email, "border-gray-300", "dark:border-gray-600");
-  removeErrorBorderOnFocus(phone, "border-gray-300", "dark:border-gray-600");
-
-  // Validierung
+  // Validation
   let isValid = true;
 
   if (!validateRequiredField(firstName) || !validateNameFormat(firstName)) {
     isValid = false;
-    document.getElementById("errorMessageFirstName").innerText =
-      "Bitte verwenden Sie nur Buchstaben, Leerzeichen oder Bindestriche im Vornamen. (Max-Muster/Max Muster)";
-    firstName.classList.remove("border-gray-300", "dark:border-gray-600"); // Entfernt die ursprüngliche Randfarbe
-    firstName.classList.add("border-red-500");
+    showErrorMessage(
+      firstName,
+      "errorMessageFirstName",
+      "Bitte eine gültige Vorname eingeben"
+    );
   } else {
-    document.getElementById("errorMessageFirstName").innerText = "";
+    clearErrorMessage(firstName, "errorMessageFirstName");
   }
 
   if (!validateRequiredField(lastName) || !validateNameFormat(lastName)) {
     isValid = false;
-    document.getElementById("errorMessageLastName").innerText =
-      "Bitte verwenden Sie nur Buchstaben, Leerzeichen oder Bindestriche im Nachname. (Max-Muster/Max Muster)";
-    lastName.classList.remove("border-gray-300", "dark:border-gray-600"); // Entfernt die ursprüngliche Randfarbe
-    lastName.classList.add("border-red-500");
+    showErrorMessage(
+      lastName,
+      "errorMessageLastName",
+      "Bitte eine gültige Nachname eingeben."
+    );
   } else {
-    document.getElementById("errorMessageLastName").innerText = "";
+    clearErrorMessage(lastName, "errorMessageLastName");
   }
 
   if (!validateRequiredField(email) || !validateEmailFormat(email)) {
     isValid = false;
-    document.getElementById("errorMessageEmail").innerText =
-      "Bitte geben Sie eine korrekte E-mail Adresse ein";
-    email.classList.remove("border-gray-300", "dark:border-gray-600"); // Entfernt die ursprüngliche Randfarbe
-    email.classList.add("border-red-500");
+    showErrorMessage(
+      email,
+      "errorMessageEmail",
+      "Bitte eine gültige E-Mail eingeben."
+    );
   } else {
-    document.getElementById("errorMessageEmail").innerText = "";
+    clearErrorMessage(email, "errorMessageEmail");
   }
 
   if (!validateRequiredField(phone) || !validatePhoneNumber(phone)) {
     isValid = false;
-    document.getElementById("errorMessagePhone").innerText =
-      "Bitte geben Sie eine korrekte Telefonnummer ein";
-    phone.classList.remove("border-gray-300", "dark:border-gray-600"); // Entfernt die ursprüngliche Randfarbe
-    phone.classList.add("border-red-500");
+    showErrorMessage(
+      phone,
+      "errorMessagePhone",
+      "Bitte eine gültige Telefonnummer eingeben"
+    );
   } else {
-    document.getElementById("errorMessagePhone").innerText = "";
+    clearErrorMessage(phone, "errorMessagePhone");
   }
 
-  // Wenn alle Validierungen erfolgreich sind, dann Formular verarbeiten
+  // Formular abschicken bei erfolgreicher Validierung
   if (isValid) {
     postData(firstName.value, lastName.value, email.value);
     console.log(
@@ -97,7 +95,7 @@ function validateRequiredField(field) {
 
 // Funktion die nur Buchstaben und Bindestriche erlaubt
 function validateNameFormat(field) {
-  const namePattern = /^[a-zA-Z-][a-zA-Z-\s]*[a-zA-Z-]$/;
+  const namePattern = /^[a-zA-ZäöüÄÖÜß]+$/;
 
   if (!namePattern.test(field.value)) {
     return false;
@@ -148,7 +146,14 @@ function postData(firstName, lastName, email) {
     headers: { "Content-type": "application/json; charset=UTF-8" },
   })
     .then((response) => response.json())
-    .then((json) => console.log(JSON.stringify(json)));
+    .then((json) => {
+      console.log(JSON.stringify(json));
+      window.location.href = "formconfirm.html";
+    })
+    .catch((error) => {
+      console.log("Es gab einen Fehler", error);
+      window.location.href = "formerror.html";
+    });
 }
 
 const params = new URLSearchParams(window.location.search);
