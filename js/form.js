@@ -129,6 +129,7 @@ function postData(firstName, lastName, email) {
     email: email,
     phone: document.getElementById("phone").value,
     priority: document.querySelector('input[name="list-radio"]:checked').value,
+    service: document.getElementById("serviceDropdown").value,
     create_date: document.getElementById("startDate").value,
     pickup_date: document.getElementById("endDate").value,
   };
@@ -140,6 +141,7 @@ function postData(firstName, lastName, email) {
       email: post.email,
       phone: post.phone,
       priority: post.priority,
+      service: post.serivce,
       create_date: post.create_date,
       pickup_date: post.pickup_date,
     }),
