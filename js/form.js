@@ -95,7 +95,7 @@ function validateRequiredField(field) {
 
 // Funktion die nur Buchstaben und Bindestriche erlaubt
 function validateNameFormat(field) {
-  const namePattern = /^[a-zA-ZäöüÄÖÜß\- ]+$/;
+  const namePattern = /^[a-zA-ZäöüÄÖÜ]+([- ][a-zA-ZäöüÄÖÜ]+)*$/;
 
   if (!namePattern.test(field.value)) {
     return false;
