@@ -32,7 +32,7 @@ function validateForm(e) {
     showErrorMessage(
       firstName,
       "errorMessageFirstName",
-      "Bitte eine gültige Vorname eingeben"
+      "Bitte einen gültigen Vornamen eingeben"
     );
   } else {
     clearErrorMessage(firstName, "errorMessageFirstName");
@@ -43,7 +43,7 @@ function validateForm(e) {
     showErrorMessage(
       lastName,
       "errorMessageLastName",
-      "Bitte eine gültige Nachname eingeben."
+      "Bitte einen gültigen Nachnamen eingeben."
     );
   } else {
     clearErrorMessage(lastName, "errorMessageLastName");
