@@ -1,4 +1,3 @@
-
 const text1 = "Jetstream - ";
 const text2 = "wo Perfektion auf die Piste trifft";
 let index1 = 0;
@@ -17,21 +16,22 @@ function writeText() {
       index1++;
     } else {
       completedFirstPart = true;
-      // Initially fill textElement2 with spaces to "reserve" space
+      // Fülle textElement2 zuerst mit Leerzeichen, um Platz zu 'reservieren
       textElement2.textContent = " ".repeat(text2.length);
-      // Move the white cursor next to the yellow cursor
-      cursorElement1.style.marginLeft = "calc(14px * " + text2.length + ")";  
+      // Gelber Cursor zum weissen Cursor nach links bewegen
+      cursorElement1.style.marginLeft = "calc(14px * " + text2.length + ")";
     }
   }
 
   if (completedFirstPart && index2 < text2.length) {
-    // Replace the space at the corresponding position with the actual character
-    let newText = textElement2.textContent.split('');
+    // Ersetze das Leerzeichen an der entsprechenden Position durch die Buchstaben
+    let newText = textElement2.textContent.split("");
     newText[index2] = text2.charAt(index2);
-    textElement2.textContent = newText.join('');
-    
-    // Move the text closer to "Jetstream" (shift to the left)
-    cursorElement1.style.marginLeft = "calc(14px * " + (text2.length - index2 - 1) + ")";  
+    textElement2.textContent = newText.join("");
+
+    // Verschiebe den gelben Textcursor nach links
+    cursorElement1.style.marginLeft =
+      "calc(14px * " + (text2.length - index2 - 1) + ")";
     index2++;
   }
 }

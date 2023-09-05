@@ -8,7 +8,7 @@ function main() {
     });
   }
 
-  // Change the icons inside the button based on previous settings
+  // Ändert Logo bei Darkmode, und die Icons fillt es
   function setThemeDark() {
     if (themeToggleIcon.classList.contains("material-fill")) {
       themeToggleIcon.classList.remove("material-fill");
@@ -45,9 +45,6 @@ function main() {
     navbarMenu.classList.toggle("block");
   });
   themeToggleBtn.addEventListener("click", function () {
-    // toggle icons inside button
-
-    // if set via local storage previously
     if (localStorage.getItem("color-theme")) {
       if (localStorage.getItem("color-theme") === "light") {
         setThemeDark();
@@ -56,8 +53,6 @@ function main() {
         setThemeLight();
         localStorage.setItem("color-theme", "light");
       }
-
-      // if NOT set via local storage previously
     } else {
       if (document.body.classList.contains("dark")) {
         setThemeLight();
@@ -132,5 +127,4 @@ function setMargin(name, height) {
   }
 }
 // Aufruf der Hauptfunktion, wenn das Fenster geladen wird
-
 document.addEventListener("DOMContentLoaded", main);
