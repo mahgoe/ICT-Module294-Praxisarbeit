@@ -126,22 +126,34 @@
       class="flex items-center justify-center min-h-[70vh] flex-1 flex-col bg-slate-50 dark:bg-slate-800"
       id="form-wrapper"
     >
-      <h1
-        class="pb-5 mt-8 text-4xl text-center text-red-700 dark:text-slate-100"
-      >
-        Fehler bei der Übermittlung der Anfrage
+      <div class="text-center">
+        <div class="inline-flex p-4 bg-red-100 rounded-full">
+          <div class="p-4 bg-red-200 rounded-full stroke-red-600">
+            <span class="flex text-5xl text-red-950 material-symbols-outlined">
+              dns
+            </span>
+            <path
+              d="M17 16L22 21M22 16L17 21"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </div>
+        </div>
+      </div>
+      <h1 class="mt-5 text-[36px] font-bold dark:text-white lg:text-[50px]">
+        500 - Server error
       </h1>
-      <p class="text-xl text-red-700">ERROR: 500</p>
-
-      <p class="pb-5 text-xl text-center text-gray-500 dark:text-gray-400">
-        Bitte versuchen Sie es später erneut. Tut uns sehr sorry.
+      <p class="mt-3 text-neutral-500 dark:text-neutral-300 lg:text-lg">
+        Ups, etwas ist schief gelaufen. Bitte versuchen Sie es später erneut.
       </p>
-      <a
-        href="form.html"
-        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xl px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 mt-10"
-      >
-        Zurück zur Anfrage
-      </a>
+      <div class="flex justify-end">
+        <a
+          href="form.html"
+          class="mt-8 text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+          >zur Anfrage zurück</a
+        >
+      </div>
     </div>
     <!-- TEMPLATE_START: templates\footer.html -->
     <footer class="flex bg-slate-100 snap-start dark:bg-gray-900">
@@ -201,5 +213,6 @@
     </footer>
 
     <!-- TEMPLATE_END: templates\footer.html -->
+    <script src="./js/main.js"></script>
   </body>
 </html>
