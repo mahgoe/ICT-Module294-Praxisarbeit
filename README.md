@@ -13,3 +13,41 @@ Disclaimer: The video on index.html that was used is merely a sample video. The 
 
 # Demo/Screenshots
 ![Video - Landingpage](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExajczYnozMjZxbngwc2VpcDdmdTQ5ZnhlaThvMTRqZzZ5Y21xcnJqYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/p99JeChh4WpKfKw7tq/giphy-downsized-large.gif) 
+
+## Landing-Page
+
+![Landing-Page](md-assets/landingpage_1.png)
+
+## Darkmode Example
+
+![DarkExample](md-assets/darkexample_1.png)
+
+
+## Services
+
+![Service1](md-assets/service_1.png)
+
+![Service2](md-assets/service_2.png)
+
+![Service3](md-assets/service_3.png)
+
+## Form
+
+![Form](md-assets/forms_1.png)
+
+### Form succesfull
+
+![FormSuccesfull](md-assets/confirm_1.png)
+
+### Form confirm
+
+![FormConrfirm](md-assets/error_1.png)
+
+## About us
+
+![AboutUs](md-assets/aboutus_1.png)
+
+## Contact
+
+![Contact](md-assets/contact_1.png)
+
